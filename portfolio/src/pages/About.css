@@ -1,0 +1,108 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+:root {
+  --navy: #012340;
+  --blue: #2477BF;
+  --sky: #5FAAD9;
+  --light-blue: #A3D3D9;
+  --white: #F2F2F2;
+  --card-bg: rgba(1, 35, 64, 0.90);
+}
+
+.about-section {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, var(--navy) 60%, var(--blue) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px; /* Prevents navbar overlap */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 950px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+.about-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--sky); /* Match Skills heading color */
+  letter-spacing: 1px;
+  text-align: center; /* Center heading text */
+  width: 100%;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.about-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  border: 2.5px solid var(--sky);
+  box-shadow: 0 4px 24px rgba(36, 119, 191, 0.08);
+  padding: 1.5rem 1.3rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.about-card:hover {
+  box-shadow: 0 8px 32px rgba(36, 119, 191, 0.18);
+  border-color: var(--light-blue);
+}
+
+.about-card-title {
+  font-size: 1.25rem;
+  color: var(--light-blue);
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.about-card p {
+  font-size: 1.07rem;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+  .about-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .about-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .about-card {
+    padding: 1.2rem 0.8rem;
+  }
+}

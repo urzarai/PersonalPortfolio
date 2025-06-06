@@ -1,0 +1,123 @@
+:root {
+  --navy: #012340;
+  --blue: #2477BF;
+  --sky: #5FAAD9;
+  --light-blue: #A3D3D9;
+  --white: #F2F2F2;
+}
+
+.navbar {
+  background: var(--navy);
+  color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(1, 35, 64, 0.08);
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 2rem;
+  position: relative;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  background: var(--blue);
+  color: var(--light-blue);
+}
+
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  position: absolute;
+  left: 0;
+}
+
+.navbar__toggle-bar {
+  width: 26px;
+  height: 3px;
+  background: var(--sky);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .navbar__container {
+    padding: 0.7rem 1rem;
+  }
+  .navbar__links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar__container {
+    justify-content: flex-end;
+  }
+  .navbar__toggle {
+    display: flex;
+    position: static;
+    margin-right: 1rem;
+  }
+  .navbar__links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: var(--navy);
+    width: 100vw;
+    max-width: 320px;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    padding: 1.5rem 1.2rem;
+    box-shadow: -2px 4px 16px rgba(1,35,64,0.12);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1000;
+  }
+  .navbar__links--open {
+    transform: translateX(0);
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .navbar__link {
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    font-size: 1.15rem;
+    border-radius: 7px;
+    margin-bottom: 0.3rem;
+  }
+}
+
+/* Removed body padding-top to prevent double spacing */
