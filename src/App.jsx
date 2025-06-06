@@ -8,19 +8,20 @@ import Projects from './pages/Projects'
 import Resume from './pages/Resume'
 import Skills from './pages/Skills'
 
-
 const App = () => {
   return (
     <div>
       <Navbar/>
-      <Routes>
-        <Route path='/'  element={<Home/>}  />
-        <Route path='/about'  element={<About/>}  />
-        <Route path='/contact-me'  element={<ContactMe/>}  />
-        <Route path='/projects'  element={<Projects/>}  />        
-        <Route path='/skills'  element={<Skills/>}  />        
-        <Route path='/Resume'  element={<Resume/>}  />        
-      </Routes>
+      <main className="main-content">
+        <Routes>
+          <Route path='/'  element={<Home/>}  />
+          <Route path='/about'  element={<About/>}  />
+          <Route path='/contact-me'  element={<ContactMe/>}  />
+          <Route path='/projects'  element={<Projects/>}  />        
+          <Route path='/skills'  element={<Skills/>}  />        
+          <Route path='/Resume'  element={<Resume/>}  />        
+        </Routes>
+      </main>
     </div>
   )
 }

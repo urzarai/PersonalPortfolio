@@ -8,8 +8,6 @@ const About = () => {
         <h1></h1>
         <h1></h1>
         <h1></h1>
-        <h1></h1>
-        <h1></h1>
         
         <h1 className="about-title">About Me</h1>
 
