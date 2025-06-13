@@ -3,14 +3,14 @@ import './Projects.css';
 
 const projects = [
     {
-    title: "Prescripto",
+    title: "BlogNest",
     description: [
-      "Books appointments for doctors",
-      "has backend"
+      "Developed a blogging platform with secure login functionality for both users and admins, ensuring differentiated access and control based on user roles.",
+      "While regular users can explore blogs, view creators, and send feedback, admins have extended privileges to create, update, and delete blog content through a dedicated admin panel."
     ],
     tech: "ReactJS, MongoDB, NodeJS, ExpressJS",
     liveDemo: "",
-    gitRepo: "https://github.com/urzarai/Prescripto",
+    gitRepo: "https://github.com/urzarai/BlogNest",
     hasLiveDemo: false
   },
     {
