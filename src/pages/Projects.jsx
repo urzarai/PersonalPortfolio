@@ -9,9 +9,9 @@ const projects = [
       "While regular users can explore blogs, view creators, and send feedback, admins have extended privileges to create, update, and delete blog content through a dedicated admin panel."
     ],
     tech: "ReactJS, MongoDB, NodeJS, ExpressJS",
-    liveDemo: "",
+    liveDemo: "https://blognest-gvv7.onrender.com/",
     gitRepo: "https://github.com/urzarai/BlogNest",
-    hasLiveDemo: false
+    hasLiveDemo: true
   },
     {
     title: "GitPeek",
