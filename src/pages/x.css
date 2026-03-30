@@ -1,0 +1,104 @@
+.page {
+  padding-top: calc(var(--nav-height) + 4rem);
+  padding-bottom: 6rem;
+}
+
+.pageHeader {
+  margin-bottom: 3.5rem;
+  max-width: 680px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+}
+
+.pageTitle {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--text-primary);
+}
+
+.pageDesc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-top: 0.25rem;
+}
+
+.pageDesc strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Skills */
+.skillsBox {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skillRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.skillCat {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  min-width: 120px;
+}
+
+.skillPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Resume Button Bottom */
+.resumeBottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.resumeBtn {
+  padding: 0.7rem 1.5rem;
+  background: #7c5cfc;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.resumeBtn:hover {
+  background: #6848e6;
+  transform: translateY(-2px);
+}

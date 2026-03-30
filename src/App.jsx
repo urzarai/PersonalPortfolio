@@ -1,28 +1,38 @@
-import React from 'react'
-import {Route,Routes} from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import About from './pages/About'
-import ContactMe from './pages/ContactMe'
 import Projects from './pages/Projects'
-import Resume from './pages/Resume'
-import Skills from './pages/Skills'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import './index.css'
 
-const App = () => {
+function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('urza-theme') || 'dark'
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('urza-theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))
+  }
+
   return (
-    <div>
-      <Navbar/>
-      <main className="main-content">
+    <Router>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <main>
         <Routes>
-          <Route path='/'  element={<Home/>}  />
-          <Route path='/about'  element={<About/>}  />
-          <Route path='/contact-me'  element={<ContactMe/>}  />
-          <Route path='/projects'  element={<Projects/>}  />        
-          <Route path='/skills'  element={<Skills/>}  />        
-          <Route path='/Resume'  element={<Resume/>}  />        
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-    </div>
+    </Router>
   )
 }
 
