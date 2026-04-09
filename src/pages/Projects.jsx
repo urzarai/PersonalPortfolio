@@ -10,6 +10,19 @@ const GithubIcon = () => (
 
 const FEATURED = [
   {
+    id: 'surakshid',
+    title: 'SurakshID',
+    description: 'Full-stack KYC/AML document verification system that automates financial onboarding. Extracts structured fields from passports, Aadhaar cards, and PAN cards via Tesseract OCR and Groq LLM, then screens against OFAC and UN sanctions watchlists.',
+    detail: 'Built a 6-stage verification pipeline (upload → classify → extract → validate → screen → score) with AML watchlist screening using fuse.js fuzzy name matching against OFAC Consolidated and UN Security Council lists. Produces a weighted 0–100 risk score with compliance-grade PDF audit reports via PDFKit. Deployed via Docker on Render + Vercel with MongoDB Atlas.',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Groq AI', 'Tesseract OCR'],
+    accent: '#3451d1',
+    accentBg: 'rgba(52,81,209,0.08)',
+    emoji: '🛡️',
+    size: 'large',
+    live: 'https://suraksh-id.vercel.app/',
+    github: 'https://github.com/urzarai/SurakshID',
+  },
+  {
     id: 'reqclarity',
     title: 'ReqClarity AI',
     description: 'AI-powered SRS quality analyser that detects ambiguity, non-testability, and incompleteness across 16 rule patterns. Generates a weighted 0–100 quality score per requirement using Llama 3.3 70B via Groq API.',
@@ -56,7 +69,7 @@ const FEATURED = [
     tags: ['Python', 'GitHub API', 'Rich', 'CLI'],
     accent: '#22c55e',
     accentBg: 'rgba(34,197,94,0.08)',
-    emoji: '📊',
+    emoji: '🐙',
     size: 'medium',
     live: null,
     github: 'https://github.com/urzarai/GitPeek',
